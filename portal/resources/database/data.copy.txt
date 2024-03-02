@@ -1,0 +1,89 @@
+
+# create table for students, teachers and admin
+CREATE TABLE users (
+    username varchar(255) not null PRIMARY KEY,         # username
+    fname varchar(255) not null,                        # first name
+    mname varchar(255) not null,                        # middle name
+    lname varchar(255) not null,                        # last name
+    email varchar(255) UNIQUE not null,                 # email
+    user varchar(255) not null,                         # student, teacher, admin
+    userID varchar(50) not null,                        # student ID
+    course varchar(255) not null,                       # course
+    _password LONGTEXT not null,                        # password
+    bdate datetime not null,                            # birthdate
+    _year int(2)         ,                              # year in school
+    location varchar(255),                              # address
+    gender varchar(20),                                 # gender
+    profilePicture LONGBLOB                             # photo
+);
+
+# create table of student's grade
+CREATE TABLE Grade(
+    id int(11) not null PRIMARY KEY AUTO_INCREMENT,
+    username TINYTEXT not null,
+    fullname LONGTEXT not null,
+    subject varchar(255) not null,
+    course varchar(255) not null,
+    subcode varchar(255) not null,
+    grade float(11) not null,
+    year int(2) not null
+);
+
+# create table of student's account
+CREATE TABLE Account(
+    id int(11) not null PRIMARY KEY AUTO_INCREMENT,
+    username varchar(255) not null,
+    username LONGTEXT not null,
+    course varchar(255) not null,
+    year int(2) not null,
+    sem varchar(225) not null,
+    balance int(11) not null,
+    FOREIGN KEY (username) REFERENCE users(username)
+);
+
+insert into grades (username, fullname, subject, course, subcode, grade, year) VALUES ('cvaydal', 'Christian Vaydal', 'information management', 'Data Communication', 'ITE Major 6', 89.3, 3);
+
+CREATE TABLE SUBJECT(
+    code varchar(255) not null PRIMARY KEY,
+    name varchar(255) not null,
+    _year int(2) not null,
+    course varchar(255) not null,
+    teacher varchar(255) not null,
+    FOREIGN KEY (teacher) REFERENCES users(username)
+);
+
+insert into subject (code, name, _year, course, teacher) values ('ELECTIVE 3', 'Event driven programming', 3, 'bsit3', 'tstark');
+insert into subject (code, name, _year, course, teacher) values ('ELECTIVE 4', 'Web System and technologies', 3, 'bsit3', 'tstark');
+insert into subject (code, name, _year, course, teacher) values ('FE 3', 'Enterprise system', 3, 'bsit3', 'tstark');
+insert into subject (code, name, _year, course, teacher) values ('FE 4', 'Business intelligence', 3, 'bsit3', 'tstark');
+insert into subject (code, name, _year, course, teacher) values ('ITE Major 6', 'Information Management 2', 3, 'bsit3', 'tstark');
+insert into subject (code, name, _year, course, teacher) values ('ITE Major 8', 'System Integration and Architecture', 3, 'bsit3', 'tstark');
+insert into subject (code, name, _year, course, teacher) values ('GElec 2', 'Entrepreneurial mind', 3, 'bsit3', 'tstark');
+
+CREATE TABLE COURSE(
+    code varchar(255) not null PRIMARY KEY,
+    name varchar(255) not null,
+    _year int(2) not null
+);
+
+insert into course (code, name, _year) values ("bsit3", "BS in Information Technology", 3);
+
+create table Posts(
+    id int(22) not null PRIMARY KEY AUTO_INCREMENT,
+    title varchar(255) not null,
+    content LONGTEXT not null,
+    _date datetime not null
+);
+
+# insert data in student table
+insert into students (fname, mname, lname, username, user, email, _password, bdate, studentID, course, _year) VALUES ('christian', 'N/A', 'vaydal', 'cvaydal', 'student', 'cvaydal@sbca.edu.ph', '12345678', '2000-11-10 16:38:34', 'cu27818-2021', 'BSIT', '3');
+
+insert into grades (username, subject, course, grade, year) VALUES ('cvaydal', 'information management', 'ITE Major 6', 89.3, 3);
+
+insert into TotalGPA (username, _year, _sem, gpa, updated) values ('cvaydal', 3, 1, 89.5, 10/10/2023);
+
+# select user
+SELECT username FROM `students`
+
+SELECT * FROM 'students' WHERE username='cvaydal'
+SELECT * FROM 'students' WHERE username='cvaydal' and fname='christian'

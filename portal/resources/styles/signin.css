@@ -1,0 +1,354 @@
+:root{
+	---maincolor: #100C08;
+	---smokey: #353935;
+	---offwhite: #FAF9F6;
+	---alabaster: #EDEADE;
+	---neonRed: #FF3131;
+	---rubyRed: #E0115F;
+	---salmon: #FA8072;
+	---lineColor: #b0b0b06a;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+body{
+	font-size: 18px;
+	font-family: Arial;
+	color: var(---maincolor);
+}
+
+.container{
+	padding: 10px;
+}
+
+.container .header{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+.container .header .logo{
+	font-family: Georgia;
+	font-weight: bold;
+	font-size: 20px;
+	color: var(---neonRed);
+	padding: 10px;
+	display: flex;
+}
+
+.container .header .logo img{
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+}
+
+.container .header .logo #school{
+	padding: 10px;
+}
+
+.container .header .login{
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container .header .login #message{
+	color: var(---neonRed);
+	font-size: 20px;
+}
+
+.container .header .login #apply,
+.container .header .login #login{
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 16px;
+	background: var(---neonRed);
+	color: var(---offwhite);
+	font-family: Verdana;
+	margin-left: 5px;
+}
+
+.container .loginContent{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 85vh;
+	background-image: url("../assets/schoolbg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat no-repeat;
+	background-position: top;
+	border-radius: 5px;
+}
+
+.container .loginContent .loginCard{
+	display: block;
+	border: 1px solid var(---lineColor);
+	border-radius: 5px;
+	width: 350px;
+	height: 500px;
+	border: 1px solid var(---lineColor);
+	box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.5);
+
+	/*
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);*/
+	background: white;
+}
+
+.container .loginContent .loginCard .header{
+	font-weight: bold;
+	color: var(---smokey);
+}
+
+.container .loginContent .loginCard .logo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container .loginContent .loginCard .logo img{
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	margin-bottom: 20px;
+	border-radius: 10px;
+}
+
+.container .loginContent .loginCard .loginForm{
+	padding-left: 15px;
+	padding-right: 15px;
+	text-align: center;
+}
+
+.container .loginContent .loginCard .other{
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	font-size: 15px;
+	font-weight: bold;
+	color: var(---neonRed);
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.container .loginContent .loginCard .other .user{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.container .loginContent .loginCard .social{
+	display: flex;
+	justify-content: center;
+	margin-top: 25px;
+}
+
+.container .loginContent .loginCard .social div{
+	margin: 10px;
+	text-align: center;
+}
+
+.container .loginContent .loginCard .social div img{
+	width: 30px;
+	height: 30px;
+	border-radius: 20px;
+}
+
+.container .loginContent .loginCard .social div p{
+	font-size: 10px;
+	color: var(---maincolor);
+}
+
+.container .loginContent .loginCard .loginForm form .inp{
+	display: flex;
+	justify-content: center;
+	padding: 5px;
+}
+
+.container .loginContent .loginCard .loginForm form .inp:not(#sub){
+	border: 1px solid var(---lineColor);
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+
+.container .loginContent .loginCard .loginForm form .inp img{
+	padding: 5px;
+}
+
+.container .loginContent .loginCard .loginForm form .inp input{
+	width: 300px;
+	padding: 5px;
+	font-size: 18px;
+	background: transparent;
+	color: var(---maincolor);
+	border: none;
+}
+
+.container .loginContent .loginCard .loginForm form .inp input:focus{
+	outline: none;
+}
+.container .loginContent .loginCard .loginForm form .inp input::placeholder{
+	color: var(---smokey);
+}
+
+.container .loginContent .loginCard .loginForm form #submit{
+	background: var(---neonRed);
+	color: var(---offwhite);
+	margin-top: 10px;
+	border: 1px solid var(---lineColor);
+	box-shadow: 2px 2px 3px rgb(0, 0, 0, 0.5);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+}
+
+.container .loginContent .loginCard .loginForm form #submit:hover{
+	background: var(---maincolor);
+}
+
+.container .loginContent .loginCard .loginForm form .forgotpass{
+	text-align: right;
+	font-size: 15px;
+	margin-right: 10px;
+}
+
+.container .loginContent .loginCard .loginForm form .forgotpass a{
+	text-decoration: none;
+	color: var(---salmon);
+}
+
+.container .mission{
+	margin: 50px;
+}
+
+.container .mission .title{
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	color: var(---neonRed);
+}
+.container .mission .missionContent{
+	display: flex;
+}
+
+.container .mission .missionContent .left{
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border: 1px solid var(---lineColor);
+	border-radius: 10px;
+	padding: 10px;
+	background-image: url("../assets/sbca.logo4.jpg");
+	background-size: 40%;
+	background-position: center;
+	background-repeat: no-repeat no-repeat;
+	margin: 5px;
+}
+
+.container .mission .missionContent .right{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	margin: 5px;
+	border: 1px solid var(---lineColor);
+	border-radius: 10px;
+}
+.container .mission .missionContent .right img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+@media (min-width: 701px){
+	.container .content{
+		display: flex;
+		align-items: center;
+		padding-left: 10px;
+		padding-right: 10px;
+		height: 80vh;
+		background-image: url("../assets/image.jpg");
+		background-size: cover;
+		background-position: center;
+		border-radius: 5px;
+	}
+	.container .content .right{
+		width: 50%;
+		height: 90%;
+		padding: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.container .content .right .form{
+		display: flex;
+		padding: 10px;
+		width: 100%;
+		max-width: 100%;
+		display: block;
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+		border: 1px solid var(---lineColor);
+	}
+
+}
+
+@media (max-width: 700px){
+	.container{
+		padding: 0;
+	}
+	.container .header .login #message{
+		display: none;
+	}
+
+	.container .content{
+		display: flex;
+		height: 80vh;
+	}
+
+	.container .content .left{
+		display: none;
+	}
+
+	.container .content .right{
+		width: 100%;
+	}
+
+	.container .content .right .form{
+		background: transparent;
+		padding: 10px;
+		height: 100%;
+	}
+
+	.container .loginContent{
+		background: none;
+		border-radius: 0;
+	}
+	.container .mission{
+		margin: 20px 0 0 0;
+	}
+	.container .mission .missionContent{
+		display: block;
+		padding: 10px;
+	}
+	.container .mission .missionContent .left{
+		width: auto;
+		height: 200px;
+		max-height: 200px;
+	}
+	.container .mission .missionContent .right{
+		display: none;
+	}
+	.container .corevalues .coreval .contents .core{
+		font-size: 15px;
+		white-space: nowrap;
+	}
+}

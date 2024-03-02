@@ -1,0 +1,231 @@
+:root{
+	---sbcaRed: #f55742;
+	---sbcaBlack: #1e1e1e;
+	---sbcaGray: #aaaaaaff;
+	---line: #adadad43;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: Arial;
+	font-size: 18px;
+	color: var(---sbcaBlack);
+}
+
+.nav{
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav .logo{
+	font-weight: bold;
+	font-size: 20px;
+	padding: 10px;
+	color: var(---sbcaRed);
+	display: flex;
+}
+
+.nav .logo .title{
+	padding: 10px;
+}
+
+.nav .logo img{
+	height: 50px;
+	width: 50px;
+	object-fit: cover;
+}
+
+.nav ul{
+	display: flex;
+}
+
+.nav ul div{
+	padding: 10px;
+	text-align: center;
+}
+
+.nav ul div li{
+	margin-left: 10px;
+}
+
+.nav ul div li a{
+	color: var(---sbcaGrays);
+	font-size: 20px;
+}
+.nav ul div li a:hover{
+	color: var(---sbcaRed);
+}
+
+.content{
+	display: flex;
+	overflow-y: scroll;
+}
+
+.content .left{
+	width: 20%;
+}
+.content .left .user{
+	padding: 5px;
+	display: flex;
+	border: 1px solid var(---line);
+	border-radius: 10px;
+	margin-bottom: 50vh;
+}
+
+.content .left .other ul div{
+	display: flex;
+	padding: 5px;
+}
+.content .left .other ul div i{
+	padding: 3px;
+}
+.content .left .other ul div li a{
+	color: var(---sbcaBlack);
+	font-size: 15px;
+	margin-left: 5px;
+}
+
+.content .left .user .photo img{
+	width: 50px;
+	height: 50px;
+	margin-right: 5px;
+	border-radius: 50%;
+}
+.content .left .user .info .name{
+	font-weight: bold;
+}
+.content .left .user .info .course{
+	font-size: 13px;
+	color: var(---sbcaGray);
+}
+
+.content .center{
+	width: 50%;
+	border-left: 1px solid var(---line);
+	border-right: 1px solid var(---line);
+}
+.content .center .top{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+}
+.content .center .top a{
+	color: var(---sbcaRed);
+	padding: 5px;
+}
+.content .center .top .search{
+	background: #fff5d5;
+	padding: 5px;
+	border-radius: 20px;
+	display: flex;
+}
+.content .center .top .search input{
+	background: transparent;
+	border: none;
+	width: 250px;
+	padding: 5px;
+	font-family: Verdana;
+}
+.content .center .top .search button{
+	border: 1px solid var(---line);
+	font-weight: bold;
+	color: white;
+	background: var(---sbcaRed);
+}
+.content .center .top .search input:focus{
+	outline: none;
+}
+
+.content .center .posts .postContent{
+	border-bottom: 1px solid var(---line);
+	padding-bottom: 10px;
+}
+
+.content .center .posts .postContent .name{
+	display: flex;
+	justify-content: space-between;
+}
+
+.content .center .posts .postContent .name .username{
+	font-weight: bold;
+}
+.content .center .posts .postContent .name .date{
+	color: var(---sbcaGray);
+}
+.content .center .posts .postContent .contents .title{
+	font-weight: bold;
+	font-style: italic;
+	color: #282828;
+}
+.content .center .posts .postContent .contents .media{
+	height: auto;
+	width: 100%;
+	border-radius: 10px;
+}
+.content .center .posts .postContent .contents .contnt{
+	color: #282828;
+	font-size: 15px;
+}
+
+.content .right{
+	width: 30%;
+}
+.content .left, .content .center, .content .right{
+	padding: 10px;
+}
+
+.content .right .calendar{
+	width: 100%;
+	height:auto;
+	border: 1px solid var(---line);
+	border-radius: 10px;
+	padding: 5px;
+}
+.content .right .calendar .top{
+	font-weight: bold;
+	font-size: 20px;
+	padding: 5px;
+	display: flex;
+	justify-content: space-between;
+}
+.content .right .calendar .weeks{
+	display: flex;
+	justify-content: center;
+}
+.content .right .calendar .weeks .week{
+	margin-left: 3px;
+	margin-right: 3px;
+	padding: 5px;
+}
+.content .right .calendar .blocks{
+	display: flex;
+	justify-content: center;
+}
+.content .right .calendar .blocks .block{
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	border: 1px solid var(---line);
+	padding: 10px;
+	font-size: 15px;
+	margin: 3px;
+}
+.content .right .calendar .blocks .sunday{
+	background: var(---sbcaRed);
+	color: white;
+}
+
+@media (max-width: 750px){
+	.content .right .calendar .weeks .week{
+		font-size: 15px;
+		color: red;
+	}
+}

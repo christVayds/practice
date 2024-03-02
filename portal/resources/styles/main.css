@@ -1,0 +1,1763 @@
+:root{
+	---maincolor: #100C08;
+	---smokey: #353935;
+	---offwhite: #FAF9F6;
+	---alabaster: #EDEADE;
+	---neonRed: #FF3131;
+	---rubyRed: #E0115F;
+	---salmon: #FA8072;
+	---lineColor: #b0b0b06a;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+body{
+	font-size: 18px;
+	font-family: Arial;
+	color: var(---maincolor);
+	background: white;
+}
+
+.navbar{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+}
+.navbar div{
+	display: flex;
+}
+.navbar .logo{
+	padding: 10px;
+	cursor: pointer;
+}
+.navbar .logo img{
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+}
+.navbar .logo .title{
+	font-weight: bold;
+	font-family: Georgia;
+	color: red;
+	padding: 10px;
+}
+.navbar .nav{
+	justify-content: center;
+	padding: 15px;
+}
+.navbar .nav div{
+	border-radius: 5px;
+	cursor: pointer;
+	margin-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.navbar .nav div a{
+	color: var(---smokey);
+}
+.navbar .nav div a:hover{
+	color: var(---neonRed);
+}
+
+#nav div #selected,
+.navbar .nav div #selected{
+	color: var(---neonRed);
+}
+.navbar .option{
+	display: none;
+}
+.visible{
+	display: flex;
+}
+.hidden{
+	display: none;
+}
+
+/* Navbar in mobile and tablet view */
+.navbar .option button{
+	border: none;
+	background: transparent;
+	font-size: 18px;
+	font-weight: bold;
+	border-radius: 10px;
+	padding: 10px;
+	font-family: Verdana;
+	color: var(---maincolor);
+}
+
+.navbar .option button img{
+	height: 30px;
+	width: 30px;
+}
+
+.navbar .option button:hover{
+	background: var(---alabaster);
+}
+#nav{
+	flex-direction: column;
+}
+#nav div{
+	text-align: center;
+	padding: 10px;
+	cursor: pointer;
+}
+#nav div a{
+	color: var(---smokey);
+}
+#nav div:hover{
+	color: var(---smokey);
+	background: var(---alabaster);
+}
+
+/* DASHBOARD */
+
+.dboard .conts{
+	display: flex;
+	padding: 10px;
+}
+
+.dboard .conts .userTab{
+	padding: 10px;
+	margin-right: 10px;
+	width: 30%;
+	border: 1px solid var(---lineColor);
+	border-radius: 10px;
+	background: var(---offwhite);
+	cursor: pointer;
+	height: fit-content;
+}
+
+.dboard .conts .userTab .user{
+	display: flex;
+}
+
+.dboard .conts .userTab .user .photo img{
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	object-fit: cover;
+}
+
+.dboard .conts .userTab .user .info{
+	padding: 5px;
+}
+.dboard .conts .userTab .user .info .name{
+	font-weight: bold;
+}
+.dboard .conts .userTab .user .info .course{
+	color: var(---smokey);
+}
+
+.dboard .conts .userTab .gpa_view{
+	padding: 10px;
+	border: 1px solid var(---lineColor);
+	border-radius: 5px;
+}
+
+.dboard .conts .userTab .gpa_view .gpa{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+	width: 100%;
+	border: 1px solid var(---lineColor);
+	border-radius: 5px;
+	font-size: 50px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	background: var(---neonRed);
+	color: var(---offwhite);
+}
+
+.dboard .conts .userTab .gpa_view .title{
+	text-align: center;
+}
+
+.dboard .conts .userTab .gpa_view .title #title{
+	font-size: 20px;
+	font-weight: bold;
+}
+.dboard .conts .userTab .gpa_view .title #description{
+	color: var(---smokey);
+	font-size: 15px;
+}
+
+.dboard .conts .dashboardTab{
+	width: 70%;
+}
+
+.dboard .conts .dashboardTab .top{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	border: 1px solid var(---lineColor);
+	background: var(---neonRed);
+	border-radius: 10px 10px 0 0;
+}
+
+.dboard .conts .dashboardTab .top .schoolYear{
+	font-weight: bold;
+	color: var(---offwhite);
+}
+
+.dboard .conts .dashboardTab .grades .gpa .title{
+	color: var(---smokey);
+}
+
+.dboard .conts .dashboardTab .top .semester{
+	color: var(---offwhite);
+}
+
+.dboard .conts .dashboardTab .grades{
+	padding: 5px;
+	border: 1px solid var(---lineColor);
+	border-radius: 0 0 10px 10px;
+}
+
+.dboard .conts .dashboardTab .grades .gpa,
+.dboard .conts .dashboardTab .grades .history{
+	display: flex;
+	justify-content: space-between;
+}
+.dboard .conts .dashboardTab .grades .history .viewall{
+	cursor: pointer;
+	color: var(---neonRed);
+}
+
+.dboard .conts .dashboardTab .grades .gpa #gpa{
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.dboard .conts .dashboardTab .grades .courses{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.dboard .conts .dashboardTab .grades .courses .subject{
+	width: 150px;
+	max-width: 150px;
+	height: 120px;
+	max-height: 120px;
+	border: 1px solid var(---lineColor);
+	box-shadow: 2px 2px 3px rgb(0, 0, 0, 0.7);
+	background-color: var(---offwhite);
+	border-radius: 10px;
+	margin: 5px;
+	cursor: pointer;
+	position: relative;
+}
+
+.dboard .conts .dashboardTab .grades .courses .subject .grade{
+	display: flex;
+	justify-content: center;
+	height: 50px;
+	align-items: center;
+	font-size: 20px;
+	background: var(---neonRed);
+	color: var(---offwhite);
+	border-radius: 10px 10px 0 0;
+}
+
+.dboard .conts .dashboardTab .grades .courses .subject .name{
+	font-size: 15px;
+	padding: 5px;
+	font-weight: bold;
+	color: #595959ff;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.dboard .conts .dashboardTab .grades .courses .subject .name #subjectName{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.dboard .conts .dashboardTab .grades .courses .subject .name #subjectId{
+	font-weight: normal;
+	position: absolute;
+	bottom: 0;
+	color: var(---smokey);
+	width: 80%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* Account page */
+
+.account .account_view{
+	padding: 10px;
+	display: flex;
+}
+
+.account .view{
+	margin: 5px;
+}
+
+.account .user_option{
+	border-radius: 10px;
+	background: var(---offwhite);
+	color: var(---maincolor);
+	width: 350px;
+	height: 250px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 2px 2px 10px rgb(0, 0, 0, 1);
+	transition: transform 0.4s, top 0.4s;
+	visibility: hidden;
+}
+
+.account .user_option_show{
+	visibility: visible;
+}
+
+.account .user_option .header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(---neonRed);
+	color: var(---offwhite);
+	border-radius: 10px 10px 0 0;
+	padding: 5px;
+}
+
+.account .user_option .header .exit,
+.account .user_option .header .logo{
+	display: flex;
+	align-items: center;
+	padding: 5px;
+}
+
+.account .user_option .header .exit:hover{
+	border-radius: 20px;
+	background-color: var(---salmon);
+}
+
+.account .user_option .header .logo p{
+	font-size: 18px;
+	font-weight: bold;
+	margin-left: 5px;
+}
+
+.account .user_option .openFile{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	height: 75%;
+	border-radius: 0 0 10px 10px;
+}
+
+.account .user_option .openFile #submit,
+.account .user_option .openFile #fileinput{
+	display: none;
+}
+
+.account .user_option .openFile .fileopener{
+	height: 50%;
+	width: 200px;
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid var(---lineColor);
+	background-color: var(---offwhite);
+	color: var(---maincolor);
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	position: relative;
+	cursor: pointer;
+}
+
+.account .user_option .openFile .fileopener:hover{
+	background-color: var(---alabaster);
+}
+
+.account .user_option .openFile .fileopener i,
+.account .user_option .openFile .fileopener p{
+	top: 65%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	white-space: nowrap;
+}
+
+.account .user_option .openFile .fileopener i{
+	top: 40%;
+	font-size: 30px;
+}
+
+.account .account_view .options{
+	width: 20%;
+	height: fit-content;
+	border: 1px solid var(---lineColor);
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.account .account_view .options .logo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.account .account_view .options .logo img{
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+}
+
+.account .account_view .options .table{
+	border-bottom: 1px solid var(---lineColor);
+	margin-bottom: 10px;
+}
+
+.account .account_view .options .table .title{
+	font-weight: bold;
+	color: var(---neonRed);
+}
+
+.account .account_view .options .table .content{
+	padding: 5px;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.account .account_view .options .table .content a{
+	font-size: 16px;
+	text-decoration: none;
+	color: var(---smokey);
+}
+
+.account .account_view .options .table .content img{
+	padding: 5px;
+	height: 15px;
+	width: 15px;
+}
+
+.account .account_view .options .table .content:hover{
+	background: var(---alabaster);
+	cursor: pointer;
+}
+
+.account .account_view .usercontent{
+	width: 80%;
+}
+
+.account .account_view .usercontent .coverphoto{
+	width: 100%;
+	height: 200px;
+	border: 1px solid var(---lineColor);
+	border-radius: 10px;
+	margin-bottom: 10px;
+	transition: height 0.3s ease;
+	background-image: url("../assets/cover2.png");
+	background-size: cover;
+	background-repeat: no-repeat no-repeat;
+	background-position: center;
+}
+
+.account .account_view .usercontent .user_info{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.account .account_view .usercontent .user_info .profile_photo{
+	display: flex;
+	align-items: center;
+}
+
+.account .account_view .usercontent .user_info .profile_photo img{
+	width: 45px;
+	height: 45px;
+	object-fit: cover;
+	border-radius: 50%;
+	margin-right: 5px;
+}
+
+.account .account_view .usercontent .user_info .profile_photo #username{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.account .account_view .usercontent .details{
+	margin-top: 20px;
+	padding: 10px;
+	border-radius: 10px;
+	min-height: 150px;
+	background: white;
+	box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.2);
+}
+
+.account .account_view .usercontent .details .details_header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.account .account_view .usercontent .details .details_header button{
+	border: none;
+	background: transparent;
+}
+
+.account .account_view .usercontent .details .details_header button i{
+	font-size: 25px;
+	cursor: pointer;
+}
+
+.account .account_view .usercontent .details .details_header #title{
+	font-weight: bold;
+}
+
+.account .account_view .usercontent .details .content{
+	padding: 10px;
+}
+
+.account .account_view .usercontent .details .content .info{
+	border-bottom: 1px solid var(---lineColor);
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+.account .account_view .usercontent .details .content .info .con{
+	display: flex;
+	align-items: center;
+}
+
+.account .account_view .usercontent .details .content .info .con img{
+	height: 15px;
+	width: 15px;
+	margin-right: 5px;
+}
+
+.account .account_view .usercontent .user_balance{
+	display: flex;
+	margin-top: 10px;
+}
+
+.account .account_view .usercontent .user_balance .side{
+	margin: 5px;
+	width: 50%;
+	min-height: 400px;
+	border-radius: 5px;
+}
+
+.account .account_view .usercontent .user_balance .left_side{
+	box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.2);
+}
+
+.account .account_view .usercontent .user_balance .left_side .to_pay{
+	padding: 20px;
+}
+.account .account_view .usercontent .user_balance .left_side .to_pay #amount{
+	color: green;
+	font-weight: bold;
+}
+
+.account .account_view .usercontent .user_balance .left_side .to_pay #label{
+	font-size: 15px;
+	color: var(---smokey);
+}
+
+.account .account_view .usercontent .user_balance .left_side ._total{
+	display: block;
+	padding: 10px;
+}
+
+.account .account_view .usercontent .user_balance .left_side ._total .content{
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.account .account_view .usercontent .user_balance .left_side .history{
+	padding: 10px;
+}
+
+.account .account_view .usercontent .user_balance .left_side .history .content{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px;
+}
+
+.account .account_view .usercontent .user_balance .right_side .payment{
+	height: 49%;
+	border-radius: 5px;
+	box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.2);
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.account .account_view .usercontent .user_balance .right_side .payment .sched{
+	padding: 10px;
+	font-weight: bold;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.account .account_view .usercontent .user_balance .right_side .payment .other{
+	padding: 15px;
+}
+
+.account .account_view .usercontent .user_balance .left_side,
+.account .account_view .usercontent .user_balance .right_side .sbca_contact,
+.account .account_view .usercontent .user_balance .right_side .schedule{
+	background-image: url("../assets/sbca.logo4.jpg");
+	background-size: 40%;
+	background-position: center;
+	background-repeat: no-repeat no-repeat;
+}
+
+.account .account_view .usercontent .user_balance .right_side .payment .sched button{
+	border: none;
+	background-color: transparent;
+}
+
+.account .account_view .usercontent .user_balance .right_side .payment .timeline{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+}
+
+.account .account_view .usercontent .accountBalance{
+	margin-top: 10px;
+	padding: 10px;
+	border-radius: 5px;
+	background: var(---neonRed);
+	color: var(---offwhite);
+	min-height: 200px;
+	box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.2);
+}
+
+.account .account_view .usercontent .accountBalance .table{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 10px;
+	border-bottom: 1px solid var(---alabaster);
+}
+
+.account .account_view .usercontent .accountBalance .fee{
+	color: var(---maincolor);
+}
+
+.account .account_view .usercontent .accountBalance ._total{
+	text-align: right;
+	margin-top: 10px;
+	color: var(---neonRed);
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.account .account_view .usercontent .schedulePayments{
+	margin-top: 20px;
+	padding: 10px;
+	border-left: 5px solid var(---neonRed);
+	min-height: 150px;
+	box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.2);
+	border-radius: 10px;
+}
+
+.account .account_view .usercontent .schedulePayments .table{
+	border-bottom: 1px solid var(---lineColor);
+	display: flex;
+	justify-content: space-between;
+	align-tracks: center;
+	padding: 5px;
+}
+
+.account .account_view .usercontent .schedulePayments .title{
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.account .account_view .usercontent .total,
+.account .account_view .usercontent .subtotal{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 5px;
+	border: 1px solid var(---lineColor);
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.account .account_view .usercontent .total{
+	background: var(---neonRed);
+}
+
+.account .account_view .usercontent .paymentsMade{
+	padding: 10px;
+	margin-top: 5px;
+	border: 1px solid var(---lineColor);
+	border-radius: 5px;
+}
+
+.account .account_view .usercontent .paymentsMade #title{
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.account .account_view .usercontent .paymentsMade .content{
+	display: flex;
+	justify-content: space-between;
+}
+
+.account .account_view .usercontent .balanceHistory{
+	border: 1px solid var(---lineColor);
+	background: var(---alabaster);
+	border-radius: 10px;
+	margin-top: 5px;
+}
+
+.account .account_view .usercontent .balanceHistory .table{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	border-bottom: 1px solid var(---lineColor);
+}
+
+.account .account_view .usercontent .payable{
+	padding: 10px;
+	border: 1px solid var(---lineColor);
+	border-radius: 10px;
+	margin-top: 5px;
+	background: var(---neonRed);
+	color: var(---offwhite);
+}
+
+.account .account_view .usercontent .payable #description{
+	font-size: 15px;
+}
+
+.account .account_view .usercontent .payable .amount{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+}
+
+.account .account_view .usercontent .note{
+	padding: 15px;
+	margin-top: 5px;
+	border: 1px solid var(---lineColor);
+	border-radius: 10px;
+	color: var(---smokey);
+	background: yellow;
+}
+
+.account .account_view .usercontent .note #title{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.account .account_view .usercontent .changepass{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 80%;
+	margin-top: 50px;
+}
+
+.account .account_view .usercontent .changepass .card{
+	width: 300px;
+	height: 400px;
+	border-radius: 10px;
+	padding: 10px;
+	box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.5);
+}
+
+.account .account_view .usercontent .changepass .card .logo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.account .account_view .usercontent .changepass .card .logo img{
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+}
+
+.account .account_view .usercontent .changepass .card .title{
+	font-weight: bold;
+}
+
+.account .account_view .usercontent .changepass .card .advice{
+	color: var(---smokey);
+	font-size: 15px;
+}
+
+.account .account_view .usercontent .changepass .card .passwordCard{
+	padding: 10px;
+	text-align: center;
+}
+
+.account .account_view .usercontent .changepass .card .passwordCard input:not(#submit){
+	width: auto;
+	font-size: 20px;
+	margin-bottom: 10px;
+	border: none;
+	border-left: 5px solid var(---neonRed);
+	padding: 5px;
+}
+
+.account .account_view .usercontent .changepass .card .passwordCard input:not(#submit):focus{
+	outline: none;
+}
+
+.account .account_view .usercontent .changepass .card .passwordCard #submit{
+	padding: 10px;
+	width: auto;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	background: var(---neonRed);
+	color: var(---offwhite);
+}
+
+.account .account_view .usercontent .changepass .card .passwordCard #submit:hover{
+	background: var(---salmon);
+}
+
+.account .account_view .courses_view{
+	padding: 10px;
+	width: 100%;
+}
+
+.account .account_view .courses_view .Header{
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.account .account_view .courses_view .search form{
+	width: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 25px;
+}
+
+.account .account_view .courses_view .search #search_course{
+	font-size: 15px;
+	width: 50%;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.2);
+	padding: 10px;
+}
+
+.account .account_view .courses_view .search #search_btn{
+	padding: 5px;
+	font-size: 15px;
+	border: none;
+	background: var(---neonRed);
+	color: var(---offwhite);
+	border-radius: 5px;
+	margin-left: 10px;
+	box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.2);
+	display: none;
+}
+
+.account .account_view .courses_view .search #search_course:focus{
+	outline: none;
+}
+
+.account .account_view .courses_view .course_lists{
+	min-height: 90vh;
+	height: auto;
+	width: auto;
+	border: 1px solid var(---offwhite);
+	border-radius: 10px;
+	box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.3);
+	padding: 10px;
+}
+
+.account .account_view .courses_view .course_lists .course_card{
+	width: auto;
+	min-height: 200px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.1);
+	margin-bottom: 5px;
+}
+
+.account .account_view .courses_view .course_lists .student_card .header,
+.account .account_view .courses_view .course_lists .course_card .header{
+	border-bottom: 1px solid var(---lineColor);
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.account .account_view .courses_view .course_lists .course_card .header #name{
+	font-size: 20px;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.account .account_view .courses_view .course_lists .course_card .header #action{
+	text-decoration: none;
+	color: var(---neonRed);
+	white-space: nowrap;
+}
+
+.account .account_view .courses_view .course_lists .course_card .course_content{
+	display: flex;
+	padding: 5px;
+}
+
+.account .account_view .courses_view .course_lists .course_card .course_content .image{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 10px;
+}
+
+.account .account_view .courses_view .course_lists .course_card .course_content .image img{
+	width: 250px;
+	height: 250px;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.account .account_view .courses_view .course_lists .course_card .course_content .info{
+	color: var(---smokey);
+}
+
+.account .account_view .courses_view .course_lists .student_card{
+	padding: 5px;
+	box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.1);
+	min-height: 100px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+.account .account_view .courses_view .course_lists .student_card .content{
+	color: var(---smokey);
+	font-size: 15px;
+	padding: 10px;
+}
+
+.account .account_view .courses_view .course_lists .student_card .content .dtl{
+	display: flex;
+	align-items: center;
+}
+
+.account .account_view .courses_view .course_lists .student_card .content .dtl img{
+	padding: 5px;
+}
+
+.account .account_view .courses_view .course_lists .student_card .header .profile{
+	display: flex;
+	align-items: center;
+}
+
+.account .account_view .courses_view .course_lists .student_card .header .profile img{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-right: 5px;
+}
+
+.account .account_view .courses_view .course_lists .student_card .header #studentname{
+	font-weight: bold;
+	color: var(---maincolor);
+	text-decoration: none;
+}
+
+.account .account_view .courses_view .course_lists .student_card .header #course{
+	color: var(---smokey);
+}
+
+/* Teacher */
+
+/* teacher dashboard */
+
+/* pop up menu .addnew */
+.students .addnew{
+	border-radius: 10px;
+	width: 350px;
+	box-shadow: 2px 2px 10px rgb(0, 0, 0, 1);
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: transform 0.4s, top 0.4s;
+	background-color: var(---offwhite);
+	visibility: hidden;
+}
+
+.students .new_teacher_show{
+	visibility: visible;
+}
+.students .popup_assign_teacher .header,
+.students .popup_add_es .header,
+.students .addnew .header{
+	padding: 10px;
+	border-bottom: 1px solid var(---lineColor);
+	font-weight: bold;
+	background-color: var(---neonRed);
+	color: var(---offwhite);
+	border-radius: 10px 10px 0 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.students .addnew .header .exit_add{
+	cursor: pointer;
+	padding: 5px;
+}
+
+.students .addnew .options{
+	padding: 10px;
+	display: block;
+}
+
+.students .addnew .options .action{
+	padding: 5px;
+	cursor: pointer;
+}
+
+.students .addnew .options .action:hover{
+	background-color: var(---alabaster);
+}
+
+.students .addnew .options .action a{
+	color: var(---maincolor);
+	text-decoration: none;
+}
+
+/* pop up menu add existing students */
+.students .popup_assign_teacher,
+.students .popup_add_es{
+	border-radius: 10px;
+	width: 550px;
+	box-shadow: 2px 2px 10px rgb(0, 0, 0, 1);
+	height: 250px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: transform 0.4s, top 0.4s;
+	background-color: var(---offwhite);
+	visibility: hidden;
+}
+
+.students .es_show,
+.students .at_show{
+	visibility: visible;
+}
+
+.students .popup_add_es .search_field,
+.students .popup_assign_teacher .search_field{
+	padding: 10px;
+}
+
+.students .popup_add_es .search_field form input,
+.students .popup_assign_teacher .search_field form input{
+	width: 96%;
+	font-size: 20px;
+	border: 1px solid var(---neonRed);
+	border-radius: 5px;
+	padding: 5px;
+	color: var(---maincolor);
+	background: transparent;
+}
+
+.students .popup_add_es .search_field form input:focus,
+.students .popup_assign_teacher .search_field form input:focus{
+	outline: none;
+}
+
+.students .std_tch{
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	padding-right: 10px;
+}
+
+.students .std_tch .tab{
+	margin-left: 5px;
+	padding: 5px;
+	background: var(---salmon);
+	color: var(---offwhite);
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.students .std_tch .tab a{
+	color: var(---offwhite);
+	text-decoration: none;
+}
+
+.students .std_tch .tab:hover{
+	background: var(---salmon);
+}
+
+.students .std_tch .active{
+	background: var(---neonRed);
+}
+
+.students .students_view{
+	display: flex;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 2px;
+}
+
+.students .students_view .title{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.students .students_view .title #add{
+	font-size: 18px;
+	width: 80px;
+	padding: 5px;
+	border: none;
+	border-radius: 5px;
+	background: var(---neonRed);
+	color: var(---offwhite);
+}
+
+.students .students_view .title #add:hover{
+	background: var(---salmon);
+}
+
+.students .students_view .subjects{
+	width: 20%;
+	height: 90vh;
+	border-right: 1px solid var(---lineColor);
+	padding-right: 5px;
+	background: transparent;
+}
+
+.students .students_view .subjects .searchCourse{
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	background: var(---neonRed);
+	padding: 5px;
+}
+
+.students .students_view .subjects .searchCourse #searchCourse{
+	width: 100%;
+	font-size: 20px;
+	background: transparent;
+	color: var(---offwhite);
+	border: none;
+}
+
+.students .students_view .subjects .searchCourse i{
+	color: var(---offwhite);
+	margin-right: 5px;
+}
+
+.students .students_view .subjects .searchCourse #searchCourse:focus{
+	outline: none;
+}
+
+.students .students_view .subjects .searchCourse #searchCourse::placeholder{
+	color: var(---alabaster);
+}
+
+.students .students_view .subjects .dropdown{
+	margin-bottom: 5px;
+	position: relative;
+	display: inline-block;
+}
+
+.students .students_view .subjects .dropdown button{
+	padding: 5px;
+	border: none;
+	border-bottom: 2px solid var(---neonRed);
+	background-color: transparent;
+}
+
+.students .students_view .subjects .dropdown .dropdown_content{
+	border-radius: 5px;
+	box-shadow: 2px 2px 10px rgb(0, 0, 0, 1);
+	padding: 10px;
+	display: none;
+	position: absolute;
+	background-color: var(---offwhite);
+	min-width: 80px;
+	max-width: 100px;
+}
+
+.students .students_view .subjects .dropdown .dropdown_content a{
+	margin-bottom: 5px;
+	cursor: pointer;
+	color: var(---smokey);
+	text-decoration: none;
+}
+
+.students .students_view .subjects .dropdown .dropdown_content a:hover{
+	color: var(---neonRed);
+}
+
+.students .students_view .subjects .dropdown button:hover{
+	background-color: var(---alabaster);
+}
+
+.students .students_view .subjects .dropdown:hover .dropdown_content{
+	display: block;
+}
+
+.students .students_view .subjects .table{
+	border-bottom: 1px solid var(---lineColor);
+	padding: 5px;
+	margin-bottom: 2px;
+	cursor: pointer;
+}
+
+.students .students_view .subjects .table:hover{
+	background: var(---alabaster);
+}
+
+.students .students_view .subjects .table .subject_name{
+	font-weight: bold;
+	width: 100%;
+}
+
+.students .students_view .subjects .table .subject_name #name{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: var(---maincolor);
+}
+
+.students .students_view .subjects .table .info{
+	font-size: 15px;
+	color: var(---smokey);
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.students .students_view .controls{
+	width: 80%;
+	border: 1px solid var(---lineColor);
+	margin-left: 10px;
+}
+
+.students .students_view .controls .controlpanel{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 17px;
+	font-family: Arial;
+	background: var(---neonRed);
+	color: var(---offwhite);
+	padding: 5px;
+}
+
+.students .students_view .controls .controlpanel .side{
+	display: flex;
+	align-items: center;
+}
+
+.students .students_view .controls .controlpanel .side #search{
+	border: 1px solid var(---offwhite);
+	padding: 5px;
+	width: 250px;
+	background: transparent;
+	color: var(---offwhite);
+	border-radius: 5px 0 0 5px;
+}
+
+.students .students_view .controls .controlpanel .side #btn{
+	padding: 5px;
+	border: 1px solid var(---alabaster);
+	background: transparent;
+	color: var(---offwhite);
+	border-radius: 0 5px 5px 0;
+}
+
+.students .students_view .controls .controlpanel .side #search::placeholder{
+	color: var(---alabaster);
+}
+
+.students .students_view .controls .controlpanel .side #search:focus{
+	outline: none;
+}
+
+.students .students_view .controls .controlpanel .side #btn:hover{
+	background: var(---salmon);
+}
+
+.students .students_view .controls .controlpanel .side .action{
+	padding: 5px;
+	margin-right: 5px;
+	margin-left: 5px;
+	width: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: transparent;
+	color: var(---offwhite);
+	border: 1px solid var(---alabaster);
+	border-radius: 5px;
+	cursor: pointer;
+	white-space: nowrap;
+	font-size: 13px;
+}
+
+.students .students_view .controls .controlpanel .side .action a{
+	color: var(---offwhite);
+	text-decoration: none;
+}
+
+.students .students_view .controls .controlpanel .side .action #inputaction{
+	background-color: transparent;
+	border: none;
+	color: var(---offwhite);
+}
+
+.students .students_view .controls .controlpanel .side .action:hover{
+	background: var(---salmon);
+}
+
+.students .students_view .controls .header{
+	padding: 10px;
+	background-image: url("../assets/image.jpg");
+	background-repeat: no-repeat no-repeat;
+	background-size: cover;
+	background-position: center;
+	color: var(---offwhite);
+	margin-top: 5px;
+	border-radius: 10px 10px 0 0;
+}
+
+.students .students_view .controls .header .title{
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.students .students_view .controls .header .title #courseName{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.students .students_view .controls .header .other{
+	font-size: 15px;
+	color: var(---alabaster);
+}
+
+.students .students_view .controls .student_table{
+	background: var(---offwhite);
+	padding: 5px;
+}
+
+.students .students_view .controls .student_table .table{
+	width: 100%;
+}
+
+.students .students_view .controls .student_table .table tr #data:hover{
+	background: var(---smokey);
+	color: var(---offwhite);
+}
+
+.students .students_view .controls .student_table .table tr #data,
+.students .students_view .controls .student_table .table tr #header{
+	text-align: left;
+	padding: 5px;
+	color: var(---offwhite);
+}
+
+.students .students_view .controls .student_table .table tr #data a{
+	color: var(---offwhite);
+	text-decoration: none;
+}
+
+.students .students_view .controls .student_table .table tr .as,
+.students .students_view .controls .student_table .table tr #grade{
+	font-size: 18px;
+	border: none;
+	background: transparent;
+	width: 100px;
+	color: var(---offwhite);
+}
+
+.students .students_view .controls .student_table .table tr .as{
+	width: auto;
+}
+
+.students .students_view .controls .student_table .table tr .as::placeholder,
+.students .students_view .controls .student_table .table tr #grade::placeholder{
+	color: var(---alabaster);
+}
+
+.students .students_view .controls .student_table .table tr .as:focus,
+.students .students_view .controls .student_table .table tr #grade:focus{
+	outline: none;
+}
+
+.students .students_view .controls .student_table .table tr:nth-child(even){
+	background: var(---salmon);
+}
+
+.students .students_view .controls .student_table .table tr:nth-child(odd){
+	background: var(---neonRed);
+}
+
+.students .students_view .controls .student_table .table tr #action{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5px;
+}
+
+.students .students_view .controls .student_table .table tr #action .icon{
+	font-size: 15px;
+	border-radius: 5px;
+	padding: 5px;
+	color: var(---offwhite);
+}
+
+.students .students_view .controls .student_table .table tr #action .icon:hover{
+	color: red;
+}
+
+/* pop up menu for adding new section */
+.students .students_view .controls .new_section_close{
+	border-radius: 10px;
+	background: var(---offwhite);
+	color: var(---maincolor);
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 2px 2px 10px rgb(0, 0, 0, 1);
+	visibility: hidden;
+	transition: transform 0.4s, top 0.4s;
+}
+
+.students .students_view .controls .new_section_show{
+	visibility: visible;
+}
+
+.students .students_view .controls .new_section_close .header_{
+	padding: 10px;
+	overflow: hidden;
+	background: var(---neonRed);
+	color: var(---offwhite);
+	border-radius: 10px 10px 0 0;
+}
+
+.students .students_view .controls .new_section_close .header_ .title_{
+	float: left;
+}
+
+.students .students_view .controls .new_section_close .header_ .exit{
+	float: right;
+}
+
+.students .students_view .controls .new_section_close .user_input{
+	width: 100%;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.students .students_view .controls .new_section_close .user_input #data{
+	width: 90%;
+	padding: 10px;
+	margin: 5px;
+	border: none;
+	border-bottom: 2px solid var(---lineColor);
+	background: transparent;
+	font-size: 18px;
+	margin-left: 0;
+}
+
+.students .students_view .controls .new_section_close .user_input .action{
+	padding: 5px;
+}
+
+.students .students_view .controls .new_section_close .user_input .action #submit{
+	padding: 5px;
+	font-size: 17px;
+	width: 100px;
+	border-radius: 5px;
+	border: none;
+	background: var(---neonRed);
+	color: var(---offwhite);
+}
+
+.students .students_view .controls .new_section_close .user_input #data:focus{
+	outline: none;
+	border-bottom: 2px solid var(---maincolor);
+}
+
+/* add new students */
+
+.new-students{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.new-students .new_student_view{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.new-students .new_student_view .card{
+	width: 80%;
+	min-height: 350px;
+	border-radius: 10px;
+	border: 1px solid var(---lineColor);
+	box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.2);
+}
+
+.new-students .new_student_view .card .header{
+	padding: 10px;
+	border-bottom: 1px solid var(---lineColor);
+	border-radius: 10px 10px 0 0;
+	color: var(---offwhite);
+	background: var(---neonRed);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.new-students .new_student_view .card .header .title{
+	font-weight: bold;
+}
+
+.new-students .new_student_view .card .header .action{
+	margin-left: 5px;
+}
+
+.new-students .new_student_view .card .header .action .action-btn{
+	padding: 5px;
+	border: 1px solid var(---offwhite);
+	border-radius: 5px;
+	color: var(---offwhite);
+	background: transparent;
+	font-size: 15px;
+}
+
+.new-students .new_student_view .card .header .action .action-btn:hover{
+	background: var(---salmon);
+}
+
+.new-students .new_student_view .card .form{
+	padding: 10px;
+}
+
+.new-students .new_student_view .card .form .top{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.new-students .new_student_view .card .form .top .side{
+	display: block;
+	border: 1px solid var(---lineColor);
+	margin: 5px;
+	padding: 5px;
+	border-radius: 5px;
+	height: 420px;
+	width: auto;
+}
+
+.new-students .new_student_view .card .form .top .one{
+	width: 60%;
+	text-align: center;
+}
+
+.new-students .new_student_view .card .form .top .two{
+	width: 40%;
+	font-size: 16px;
+}
+
+.new-students .new_student_view .card .form .top .two p{
+	padding: 5px;
+}
+
+.new-students .new_student_view .card .form .top .side input{
+	width: 90%;
+	font-size: 15px;
+	padding: 10px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	border: 1px solid var(---lineColor);
+}
+
+
+.new-students .new_student_view .card .form .top .side input:focus{
+	outline: none;
+}
+
+.new-students .new_student_view .card .form .bottom{
+	width: 100%;
+	text-align: right;
+}
+
+.new-students .new_student_view .card .form .bottom input{
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	background: var(---neonRed);
+	color: var(---offwhite);
+}
+
+.new-students .new_student_view .card .form .bottom input:hover{
+	background: var(---salmon);
+}
+
+/* media */
+@media (max-width: 700px){
+	.navbar .nav{
+		display: none;
+	}
+	.navbar .option{
+		padding-top: 10px;
+		padding-bottom: 10px;
+		display: block;
+	}
+
+	.dboard .conts .userTab{
+		width: auto;
+		margin-bottom: 15px;
+		margin-right: 0;
+	}
+	.dboard .conts{
+		display: block;
+		padding: 10px;
+	}
+	.dboard .conts .dashboardTab{
+		width: 100%;
+	}
+	.dboard .conts .dashboardTab .grades .courses .subject{
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.notificationpage .notification{
+		display: flex;
+	}
+	.notificationpage .notification .card{
+		width: 100%;
+		padding: 10px;
+		border-radius: 5px;
+		background: var(---offwhite);
+	}
+
+	.account .account_view .usercontent .coverphoto{
+		height: 70px;
+	}
+
+	.account .account_view .options{
+		display: none;
+	}
+	.account .account_view .mobile{
+		display: block;
+		width: 100%;
+	}
+	.account .account_view .usercontent{
+		width: 100%;
+	}
+
+	.account .account_view .courses_view .course_lists{
+		height: auto;
+		width: auto;
+		border-radius: 10px;
+		padding: 10px;
+	}
+
+	.account .account_view .courses_view .course_lists .search #search_course{
+		font-size: 15px;
+		width: 100%;
+		border-radius: 5px;
+		border: none;
+		box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.2);
+		padding: 5px;
+	}
+
+	.account .account_view .courses_view .course_lists .course_card .course_content{
+		display: block;
+		padding: 5px;
+	}
+
+	.account .account_view .courses_view .course_lists .course_card .course_content .image{
+		margin-bottom: 10px;
+	}
+
+	.account .account_view .courses_view .course_lists .course_card .course_content .image img{
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		border-radius: 10px;
+	}
+
+	.account .account_view .usercontent .user_balance{
+		display: block;
+		margin-top: 10px;
+	}
+	.account .account_view .usercontent .user_balance .side{
+		width: auto;
+	}
+	.account .account_view .usercontent .user_balance .side .payment{
+		min-height: 200px;
+	}
+	
+}
+
+/* media */
+@media (min-width: 701px){
+	#nav{
+		display: none;
+	}
+
+	#content{
+		display: block;
+	}
+
+	.account .account_view .usercontent .coverphoto{
+		height: 100px;
+	}
+}
+
+@media (min-width: 901px){
+	.account .account_view .usercontent .coverphoto{
+		height: 200px;
+	}
+}
